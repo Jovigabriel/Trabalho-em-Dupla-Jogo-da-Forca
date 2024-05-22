@@ -1,5 +1,7 @@
-int main() {
-    //Tamanho máximo do nome escolhido pelo usuário
+int main()
+
+{
+    // Tamanho máximo do nome escolhido pelo usuário
     char inicias[7];
     // opções do menu principal
     int optionsPrincipal = 0;
@@ -8,7 +10,7 @@ int main() {
     // opções do menu de scores
     int optionsScores = 0;
 
-    //Variavel para guardar o tamanho do nome
+    // Variavel para guardar o tamanho do nome
     int tamanhoDasInicias;
     printf("\t**Jogo da Forca**");
 
@@ -54,7 +56,7 @@ int main() {
     // gameLoop é um valor bool para fechar o jogo completamente em condicionais.
     while (gameLoop)
     {
-        //Menu Principal
+        // Menu Principal
         printf("\n\n\t**Jogo da Forca**\n");
 
         printf("\n\t --------------\n\t Menu Principal\n\t --------------\nDigite o numero da opcao desejada: \n\n");
@@ -72,17 +74,16 @@ int main() {
             break;
         }
 
-
         switch (optionsPrincipal)
         {
         case 1:
-            //Menu de Categorias
+            // Menu de Categorias
             while (optionsPrincipal)
             {
                 printf("\n");
-                printf("\t[Menu Categorias]\nDigite o numero da opçao desejada: \n\n");
+                printf("\t[Menu Categorias]\nDigite o numero da opcao desejada: \n\n");
                 printf("[1] - Cores \n[2] - Frutas\n[3] - Paises\n[4] - Animais\n[5] - "
-                       "Times serie A\n[6] - Personagens Naruto\n[7] - Atos Musicais Gringo\n[8] - Protagonistas Animes\n[9] - Desenhos animados antigos\n[10] - Voltar\n\n");
+                       "Times da serie A\n[6] - Personagens de Naruto\n[7] - Atos Musicais Gringos\n[8] - Protagonistas de Anime\n[9] - Desenhos animados\n[10] - Voltar\n\n");
                 scanf(" %d", &optionsCategorias);
                 fflush(stdin);
                 system("cls");
@@ -108,24 +109,22 @@ int main() {
                 case 5:
                     jogo(5);
                     break;
-
-                // Sai do menu de categorias e volta ao principal
                 case 6:
-                    jogo (6);
+                    jogo(6);
                     break;
 
                 case 7:
-                    jogo (7);
+                    jogo(7);
                     break;
 
                 case 8:
-                    jogo (8);
+                    jogo(8);
                     break;
 
                 case 9:
-                    jogo (9);
+                    jogo(9);
                     break;
-
+                // Sai do menu de categorias e volta ao principal
                 case 10:
                     break;
 
@@ -141,7 +140,7 @@ int main() {
             break;
 
         case 2:
-        // Menu de Scores
+            // Menu de Scores
 
             // Reverte o Vetor de Scores Original e outro vetor recebe esses valores
             for (int i = 0; i < numeroDeVezesJogadas; i++)
@@ -149,7 +148,7 @@ int main() {
                 reversoVetorScore[i] = jogador.scoreParcial[numeroDeVezesJogadas - i - 1];
             }
 
-            //Caso o usuario não tiver jogado ainda não seram mostrado scores
+            // Caso o usuario não tiver jogado ainda não seram mostrado scores
             if (numeroDeVezesJogadas == 0)
             {
                 printf("\t[Menu de Scores]\nDigite o numero da opcao desejada: \n\n");
@@ -171,7 +170,7 @@ int main() {
             scanf(" %d", &optionsScores);
             fflush(stdin);
             system("cls");
-            //Voltar ao menu anterior
+            // Voltar ao menu anterior
             switch (optionsScores)
             {
             case 1:
@@ -181,7 +180,7 @@ int main() {
                 break;
             }
 
-        break;
+            break;
 
         default:
             printf("[%d] Nao e uma opcao valida digite outra\n\n", optionsPrincipal);
@@ -189,4 +188,3 @@ int main() {
         }
     }
 }
-
